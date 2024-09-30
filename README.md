@@ -1,4 +1,22 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Inventory Management System
+Here implementing a simple inventory using core concept of NEXTJS [Component, JSX, Props, State, Effect, Event Handlers].
+## Features
+<ol>
+  <li>Home</li>
+  <li>Product  List</li>
+  <li>Cart</li>
+  <li>Add to Cart</li>
+</ol>
+
+to added cart implent localStorage which are stored the cart value.
+# LocalStorage method
+```bash
+- SetValue: localStorage.setItem('key','value');
+- GetValue: localStorage.getItem('key');
+- Remove: localStorage.remove('key);
+- Clear: localStorage.clear();
+```
 
 ## Getting Started
 
