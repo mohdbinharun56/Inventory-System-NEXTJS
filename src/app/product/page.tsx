@@ -9,6 +9,7 @@ const Product = ({product}:any) => {
                 <p><small>Price: {price}</small></p>
                 <p><small>Quantity: {quantity}</small></p>
                 <img src={image}></img>
+                <button >Add To Cart</button>
             </div>
         </>
     );

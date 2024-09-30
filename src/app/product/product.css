@@ -4,3 +4,20 @@
     padding: 15px;
     border-radius: 10px;
 }
+
+.product-container button{
+    background: #92862e;
+    padding: 5px;
+    width: 100%;
+    border-radius: 10px;
+    margin: 5px 0px;
+    color: wheat;
+    font-size: large;
+    font-weight: bold;
+    transition: ease-in-out 1s;
+}
+
+.product-container button:hover{
+    background: rgb(255, 136, 0);
+    color: white;
+}
