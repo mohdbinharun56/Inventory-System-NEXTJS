@@ -3,3 +3,19 @@
     grid-template-columns: repeat(3,1fr);
     gap: 15px;
 }
+.cart-container{
+    width: fit-content;
+    border: 2px dashed tomato;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 20px;
+}
+
+.cart-title{
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+    color: brown;
+    border-bottom: 1px solid brown;
+    margin-bottom: 10px;
+}
