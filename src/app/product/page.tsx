@@ -1,7 +1,8 @@
 import './product.css';
 
-const Product = ({product}:any) => {
-    const {id,productName, price, quantity, image } = product;
+const Product = ({product, handleCart}:any) => {
+    const {productName, price, quantity, image } = product;
+    
     return (
         <>
             <div className="product-container">
@@ -9,7 +10,7 @@ const Product = ({product}:any) => {
                 <p><small>Price: {price}</small></p>
                 <p><small>Quantity: {quantity}</small></p>
                 <img src={image}></img>
-                <button >Add To Cart</button>
+                <button onClick={()=>handleCart(product)}>Add To Cart</button>
             </div>
         </>
     );

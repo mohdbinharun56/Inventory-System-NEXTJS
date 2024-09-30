@@ -5,19 +5,38 @@ import './home.css';
 
 const Home = () => {
     const [products,setProducts] = useState([]);
+    const [cart,setCart] = useState([]);
+
 
     useEffect(()=>{
         fetch('products.json')
         .then(res=>res.json())
         .then(data=>setProducts(data));
     },[]);
+
+
+    const handleCart = (product):any =>{
+        // console.log('product added',product);
+        // const productId
+        // setCart(product); // This is not the right way to set the in react
+        // cart.push(product) // This is not the right way to set the in react
+
+        const newCart:any = [...cart,product];
+        setCart(newCart);
+        // console.log(cart);
+    }
+
+    // if(!products){
+    //     return <h1>Loading.....</h1>
+    // }
     return (
         <div>
             <h1 style={{fontWeight: "bold", textAlign: "center", margin: "15px 0px"}}>Inventory System</h1>
             <h3 style={{fontWeight: "bold", margin: "15px 10px 0px 15px"}}>Products: {products.length}</h3>
+            <h3 style={{fontWeight: "bold", margin: "15px 10px 0px 15px"}}>Cart: {cart.length}</h3>
             <div className="products-container">
                 {
-                    products.map(product=><Product product={product}></Product>)
+                    products.map(product=><Product key={product.id} product={product} handleCart={handleCart}></Product>)
                 }
             </div>
         </div>
