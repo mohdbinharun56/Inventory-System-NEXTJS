@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import Product from "../product/page";
 import './home.css';
+import {setToLS, getDataLS, addTOLS} from '../../../public/utilities/localStorage'
 
 const Home = () => {
     const [products,setProducts] = useState([]);
@@ -14,7 +15,13 @@ const Home = () => {
         .then(data=>setProducts(data));
     },[]);
 
-
+    useEffect(()=>{
+        console.log('Product data:',products.length);
+        if(products.length){
+            const getCart = getDataLS('cart');
+            console.log(getCart);
+        }
+    },[products]);
     const handleCart = (product):any =>{
         // console.log('product added',product);
         // const productId
@@ -23,7 +30,8 @@ const Home = () => {
 
         const newCart:any = [...cart,product];
         setCart(newCart);
-        // console.log(cart);
+        addTOLS(product.id,'cart');
+        // console.log(setToLS(product,'cart'));
     }
 
     // if(!products){
