@@ -16,10 +16,11 @@ const Home = () => {
     },[]);
 
     useEffect(()=>{
-        console.log('Product data:',products.length);
+        // console.log('Product data:',products.length);
         if(products.length){
             const getCart = getDataLS('cart');
-            console.log(getCart);
+            // console.log(getCart);
+            setCart(getCart);
         }
     },[products]);
     const handleCart = (product):any =>{
